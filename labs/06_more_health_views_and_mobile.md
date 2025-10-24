@@ -14,6 +14,8 @@ As a Reliability Engineer:
 
 ### **Step 1: Navigate to Health Application**
 
+Go to Assets & Locations tab
+
 ![Image](../images/image_165.png)
 
 ---
@@ -65,6 +67,8 @@ Ensure you move the timeline to only show data since it has been calculated.
 
 Located in the top-right corner.
 
+ * Do not click anything from the Actions menu 
+
 ![Image](../images/image_129.png)
 
 ---
@@ -75,7 +79,7 @@ Located in the top-right corner.
 - Schedule corrective activity
 - Plan a replacement
 
-For this demo, we will **review scheduled maintenance** using the asset timeline and Maintenance History chart.
+For this demo, we will **review scheduled maintenance** using the asset timeline and Maintenance History chart. SCROLL DOWN TO BOTTOM OF PAGE
 
 ---
 
@@ -97,7 +101,7 @@ Instead of creating an extra inspection or corrective maintenance record, we wil
 
 ### **Step 9: Open the Work Order and Update the Scheduled Start**
 
-Update it to **tomorrow’s date**.
+Go to Work order Tracking --> Find Work Order --> Update Scheduled Start to **tomorrow’s date**.
 
 
 ---
@@ -108,13 +112,8 @@ As a Maintenance Manager, review and assign work based on priority and scheduled
 
 ---
 
-### **Step 1: Navigate to Work Order Tracking**
 
-Open the newly generated work order.
-
----
-
-### **Step 2: Assign Your Labor Record**
+### Assign Your Labor Record**
 
 Assign your labor record to your user and ensure:
 

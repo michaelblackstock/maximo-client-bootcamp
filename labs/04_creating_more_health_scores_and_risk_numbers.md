@@ -52,7 +52,7 @@ Click the **Group** button (top right of Contributors chart).
 ---
 
 ### **Step 14: Create First Group**
-- **Name:** Maintenance History  
+- **Name:** {FirstInitial_First3LettersOfLastName} Maintenance History  
 - **Description:** Summary of Maintenance Activities  
 Click **Create**.
 
@@ -62,7 +62,7 @@ Click **Create**.
 
 ### **Step 15: Create Second Group**
 *Use Group button again*
-- **Name:** Meters  
+- **Name:** {FirstInitial_First3LettersOfLastName} Meters  
 - **Description:** Summary of Pump Meters  
 Click **Create**.
 
@@ -79,9 +79,9 @@ Click **Create**.
 ---
 
 ### **Step 17: Select Contributors**
-- **OPENCMWO**
-- **Mean Time between Failures (MTBF)**
-- **Total Cost of CMs**
+- **Search for and select OPENCMWO**
+- **Mean Time between Failures (MTBF)  --> search for {FirstInitial_First3LettersOfLastName}MTBF**
+- **Total Cost of CMs --> {FirstInitial_First3LettersOfLastName}TCCM**
 
 Click **Add**.
 
@@ -112,9 +112,13 @@ Click **Save**.
 Go back to the Previous Page using the Breadcrumb Menu and the top and repeat for the **Meters** group.
 
 For the **Meters** group, use the following contributors and weights:
-- **Motor Temperature:** 15%  
+- **Temperature:** 15%  
 - **Oil Quality:** 50% 
 - **Pressure:** 35%
+
+*Note: We suggest searching for your {FirstInitial_First3LettersOfLastName} to populate all contributors made by you
+
+![Image](../images/meters.png)
 
 ---
 
@@ -142,7 +146,7 @@ Click the **Active** button in the top right to enable the health score.
 ---
 
 ### **Step 24: Repeat for Criticality and Risk**
-Return to the **Health Score Group** page by clicking Pumps for client in the left hand corner and repeat the process for **Criticality** and **Risk**.  
+Return to the **Health Score Group** page by clicking PUMPS FOR CLIENT for client in the breadcrumb menu and repeat the process for **Criticality** and **Risk**.  
 These will not need contributor groups; all scores will be at the top level.
 
 
@@ -150,37 +154,53 @@ These will not need contributor groups; all scores will be at the top level.
 
 ---
 
-### **Step 25a: Critacilty**
+### **Step 25a: Criticality**
 
-Select Critacilty and click Done.  
-(Choose the blank Critacilty score instead of default.) 
+-Press the + to add a score
 
-- Open Criticality group.  
-- Click the + button (top right)   
-
-Select Contributors  
-  - Priority – 60%
-  - Cost of Replacement – 40%
-
-Click the Active button in the top right to enable the Criticality score.
+![Image](../images/addcriticality.png)
 
 ![Image](../images/image_174.png)
-    
+
+Select Critacilty and click Done.  
+(Choose the blank Criticality score instead of default.) 
+
+- Open Criticality group.  
+- Click the + button  
+
+Add Contributors with the + button / Set the weights with the pencil button
+  - Priority – 60%  --> this is a premade contributor
+  - Cost of Replacement – 40%   --> search for {FirstInitial_First3LettersOfLastName}ECR
+
+![Image](../images/priority.png)
+
+![Image](../images/ecr.png)
+
+Click the Active button in the top right to enable the Criticality score.
 
 
 ---
 
 ### **Step 25b: Risk**
 
+Return to the **Health Score Group** page by clicking PUMPS FOR CLIENT for client in the breadcrumb menu
+
+![Image](../images/addcriticality.png)
+
+
 Select Risk and click Done.  
 (Choose the blank Risk score instead of default.)  
+
+![Image](../images/image_175.png)
+
 
 - Open Risk group.  
 - Click the + button (top right)  
 
-Select Contributors  
-- Health – 70%
-- Criticality – 30%
+
+Select Contributors / Set Weights
+- {FirstInitial_First3LettersOfLastName}Health – 70%
+- {FirstInitial_First3LettersOfLastName}Criticality – 30%
 
 Click the Active button in the top right to enable the Criticality score.
 
@@ -192,7 +212,7 @@ Click the Active button in the top right to enable the Criticality score.
 ---
 
 ### **Step 26: Force Score Calculation**
-Click the *Calculate Scores* button at the top if scores do not calculate automatically. If you see a red circle on the scores, that means it did not calculate properly. To troubleshoot, take these actions:
+Click the *Calculate Scores* button at the top if scores do not calculate automatically. (Refresh the page to see the scores) If you see a red circle on the scores, that means it did not calculate properly. To troubleshoot, take these actions:
 - Create a **test contributor**, add it to the score with 0% weight.
 - Start with a **count function** on the relationship and confirm it returns a value.
 - Gradually add components of the formula.
@@ -219,9 +239,11 @@ Click the *Calculate Scores* button at the top if scores do not calculate automa
 ---
 
 ### **Step 3: Edit Query**
-Click the pencil icon and select the query created for the Health Scoring Group.
+Click the pencil icon and select the query created for the Health Scoring Group. Serach for {FirstInitial_First3LettersOfLastName}-PUMPS
 
 ![Image](../images/image_107.png)
+
+![Image](../images/query.png)
 
 ---
 
@@ -266,6 +288,7 @@ Use the dropdown in the top left → **Save as New View**.
 ---
 
 ### **Step 10: Provide Title**
+Title = {FirstInitial_First3LettersOfLastName} POC Pumps
 Select **Save as my Default View**, then click **Save**.
 
 ![Image](../images/image_114.png)

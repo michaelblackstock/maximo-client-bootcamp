@@ -26,6 +26,13 @@ In this example, we create a Pump Asset Record from scratch for a mobile demo an
 
 ![Image](../images/image_39.png)
 
+### **Step 1A. Proceed to Site
+
+- You may see this warning pop up a few times sue to the demo environment setup. Hit Advanced --> Accept the Risk and Continue to move forward with the labs
+
+
+![Image](../images/risk.png)
+
 ---
 
 ### **Step 2. Using the Internal Application Navigator, open the ‘Assets’ Application**
@@ -33,6 +40,24 @@ In this example, we create a Pump Asset Record from scratch for a mobile demo an
 ![Image](../images/image_40.png)
 
 ![Image](../images/image_41.png)
+
+### **Step 2A. Set Default Site**
+
+- Click on Profile Icon
+- Select "Default Information"
+
+![Image](../images/profile.png)
+
+- Click on the Search icon next to "Default Insert Site"
+  - Select "Bedford"
+- Click on Search Icon for "Storeroom Site"
+  - Select "Bedford"
+- Click on Search Icon for "Default Storeroom"
+  - Select "Central"
+
+![Image](../images/selctedvalues.png)
+
+Note: If Insert site does not update, try logging out and logging back in to the application. 
 
 ---
 
@@ -43,7 +68,7 @@ In this example, we create a Pump Asset Record from scratch for a mobile demo an
 ---
 
 ### **Step 4. Provide an asset number and description**
-Use "{Your_Initial}PUMP123" as your asset 
+Use "{FirstInitial_First3LettersOfLasName}PUMP123" as your asset ex. SKWAPUMP123
 
 ![Image](../images/image_43.png)
 
@@ -55,7 +80,7 @@ Use "{Your_Initial}PUMP123" as your asset
 
 ---
 
-### **Step 6. Click ‘New Location’ and provide a Location Number, Description, and Type = ‘Operating’**
+### **Step 6. Click ‘New Location’ and provide a Location Name = {FirstInitial_First3LettersOfLastName}CLIENTLOC, Description, and Type = ‘Operating’** 
 
 ![Image](../images/image_45.png)
 
@@ -112,6 +137,8 @@ Adding an image is a small detail that greatly improves demo visuals.
 
 ### **Step 14. Name the meter group to match the Asset Class**
 
+{FirstInitial_First3LettersOfLastName}PUMP
+
 ![Image](../images/image_54.png)
 
 ---
@@ -134,7 +161,7 @@ Use the plus button, then **Select Value**.
 ---
 
 ## **Step 16. Filter the list by the desired value**  
-(TEMP-F, PRESSURE, OILCOLOR) by typing the value into the ‘Meter’ field and clicking **Enter/Return**, then selecting the desired meter. Repeat this process to populate the meter group with all 3 meters.
+(TEMP-F, PRESSURE, OILCOLOR) by typing the value into the ‘Meter’ field and clicking **Enter/Return**, then selecting the desired meter. Repeat this process to populate the meter group with all 3 meters.(Press the + button to add a new meter to the list)
 
 ---
 
@@ -143,19 +170,19 @@ Use the plus button, then **Select Value**.
 ---
 
 ### **Step 17. Save the record**  
-Once all three meters are created, click **Return with Value** to bring the new meters to the asset record.
+Once all three meters are created, click the save button and then **Return with Value** to bring the new meters to the asset record.
 
 ![Image](../images/image_57b.png)
 
 ---
 
-### **Step 18. Click Save on the asset record**
+### **Step 18. Click Save on the asset record to see the Meters we just entered show up**
 
 ---
 
 ### **Step 19. Add Initial Meter Readings**  
 In the Assets application, add initial readings to test Health Scores later.  
-Navigate to **More Actions → Enter Meter Readings**.
+Navigate to **More Actions → Scroll down to Enter Meter Readings**.
 
 ---
 
@@ -165,7 +192,11 @@ Navigate to **More Actions → Enter Meter Readings**.
 
 ### **Step 20. Enter a new reading for each line**  
 - Oil color → Select a reading  
-- Pressure & Temperature → Enter numeric values  
+- Pressure & Temperature → Enter numeric values
+
+- OILCOLOR = TURBID
+- PRESSURE = 30
+- TEMP-F= 125
 
 ---
 
@@ -190,7 +221,7 @@ Use the **New Labor** button on the left-hand Common Actions panel.
 
 Add labor name, associate with your person record, then go to the **Crafts** Tab.  
 
-Use your Firstname initial + Lastname
+Use your assigned username
 
 ---
 
@@ -206,17 +237,18 @@ If your "Person" does not exist, Follow these steps to create a new person
 
 ### **Step 3. Provide Craft details**  
 
-In some cases, you may need to create a new craft for the client use case (we use *Mechanic* here).
+In some cases, you may need to create a new craft for the client use case (we use *Mechanic* here). We have created the crafts in advance for this lab.
 
-In order to create a new craft, Scroll down to Crafts
+~ Go to the "Craft Tab"
 
-![Image](../images/image_62b.png)
+~ In order to add a craft, press the + button 
 
-Click "New Craft" and enter necessary information before Saving and clicking "Return With Value"
-![Image](../images/image_62c.png)
+~ Press the ' > ' button to search/select a value for the craft
 
-
----
+- Search for and select "ARMCHAIR" for the first craft
+- Press the + button to add another craft
+- Add the SECTION craft, then press the + button to add the last craft
+- Add the MECH Craft (mechanic, organization = EAGLENA)
 
 ![Image](../images/image_62.png)
 
@@ -273,7 +305,7 @@ Often paired with Preventive Maintenance to generate Work Orders.
 ---
 
 ### **Step 3. Provide a unique Job Plan number, description, and Duration**
-Use JPPUMP{your_initials} as Job Plan name
+Use JPPUMP{FirstInitial_First3LettersOfLastName} as Job Plan name (ex. JPPUMPSKWA)
 
 ---
 
@@ -282,7 +314,7 @@ Use JPPUMP{your_initials} as Job Plan name
 ---
 
 ### **Step 4. Add Job Plan tasks**  
-Scroll down to Job Plans Tasks to add tasks.
+Scroll down to Job Plans Tasks to add tasks. Press the + button to add a new task
 
 *Tip: Task Numbers increment by 10 for flexibility.*
 
@@ -320,6 +352,7 @@ Add spare parts:
 ---
 ![Image](../images/image_68d.png)
 
+Save the Job Plan
 ---
 
 ### **Step 8. Update Status from ‘DRAFT’ to ‘ACTIVE’**  
@@ -348,6 +381,8 @@ Add spare parts:
 
 ### **Step 2. Create a new Preventive Maintenance record**  
 
+*Take note of the assigned PM number (ex. 1027)
+
 Provide a description and asset number.
 ![Image](../images/image_168.png)
 
@@ -363,7 +398,7 @@ Scroll down to Work Order Information section. Attach the Job Plan created earli
 ---
 
 ### **Step 4. Apply the Asset created earlier**
-({your_initials}PUMP123)
+({FirstInitial_First3LettersOfLastName}PUMP123)
 
 ---
 

@@ -17,6 +17,8 @@ Health Scoring Groups group similar assets for custom scoring structures. This l
 
 Filter to show only desired assets. Use direct table filters or the three-dot menu.
 
+You can search for your asset either using the location set up {FirstInitial_First3LettersOfLastName}CLIENTLOC or the Asset Name {FirstInitial_First3LettersOfLastName}PUMP123
+
 ---
 
 ![Image](../images/image_75.png)
@@ -33,7 +35,7 @@ Use **Save Current Query**.
 ---
 
 ### **Step 3. Provide a unique name and description**  
-Query Name = {your_initial}-PUMPS
+Query Name = {FirstInitial_First3LettersOfLastName}-PUMPS
 
 Mark as **Public**.
 
@@ -80,6 +82,9 @@ We will create from scratch → Click **Create Scoring Group**.
 ---
 
 ### **Step 8. Provide Name & Description**  
+*Name the scoring group {FirstInitial_First3LettersOfLastName}PUMPS FOR CLIENT
+   (ex. SKWAPUMPS FOR CLIENT)
+
 Select the query using **Select**.
 
 ---
@@ -136,7 +141,7 @@ Once our scores are defined, and the required asset data is populated, we will h
 
 ## **Steps**
 
-### **Step 1.Nevigating Back**
+### **Step 1. Navigating Back**
 On the **Maximo Health**, click the **Score Settings** on the top left.
 
 ![Image](../images/image_169.png)
@@ -158,7 +163,7 @@ Click **Create Threshold**.
 ---
 
 Step 4. **Provide the following details:**
-   - **Name**  "{Your_Initials}-MTBF"
+   - **Name**  "{FirstInitial_First3LettersOfLastName}-MTBF"
    - **Description**
    - **Threshold:** 14 days
 
@@ -190,13 +195,19 @@ On the Create Contributor screen, we will see a few options and fields:
 * **Object**: Health scores can be for assets or locations; the selection of this object indicates what table we are starting from. If your contributor requires a relationship, and the object selected is 'Asset', then the relationship being referenced needs to be on the Asset Object in the Data base configuration application
 * **Data Source**: If meter is selected, it will calculate the scoring results differently using an upper limit and a lower limit while automatically providing the formula for METERVAL. If formula is selected, you will provide a best and worst value and the formula
 * **Unit of Measure**: What to be displayed next to the calculated results
-* **Formula**: This will contain the calculation for the contributor function. In this formula, you will reference relationships and attributes either directly, or within functions. The general format will be `RELATIONSHIP$ATTRIBUTE`
+* **Formula**: This will contain the calculation for the contributor function. In this formula, you will reference relationships and attributes either directly, or within functions. The general format will be `RELATIONSHIP$ATTRIBUTE` (See Note Below)
 * **Value Normalization**: For formulas, we select the 'best' value and the 'worst' value for the formula results to be put on a scale from 0 to 100. For meters, you will use an upper and lower threshold. Additionally, if the meter has a record, you can default to use those limits
+
+Note: In order to use the `RELATIONSHIP$ATTRIBUTE` we will need to create what's called a Relationship in the Database for Maximo Manage. This will allow us to access attributes of other tables in Maximo through the ASSET table.
+
+### NOTE: SKIP STEP 7A AND PROCEED TO STEP 7B
 
 ## Step 7a. Adding Relationships to Database Configuration:
 
-Before we create the Contributors we will first need to add a new relationship in the Database Configuration in Manage
-* Open up the Database Configuration in **Manage**. We recommend opening it in a new tab
+**NOTE: SKIP STEP 7A AND PROCEED TO STEP 7B**
+
+Before we create the Contributors we will first need to add a new relationship in the Database Configuration in Manage. **We have already created the CMWO relationship for you in the lab.** 
+* Open up the Database Configuration in **Manage**. 
 
     ![Image](../images/image_170.png)
 * Open the *ASSET Table* Object
@@ -204,7 +215,7 @@ Before we create the Contributors we will first need to add a new relationship i
 * Go to the *Relationships* tab at the top
 ![Image](../images/image_91b.png)
 * Click the '+' sign and fill out the following information:
-Relationship: CMWO
+Relationship: CMWO 
 Child Object: WorkOrder
 Where Clause: `assetnum=:assetnum and siteid=:siteid and WORKTYPE='CM'`
 ![Image](../images/image_91c.png)
@@ -215,7 +226,7 @@ Save and then return back to the *Create a contributor* Page
 
 ### MTBF for Corrective Maintenance:
 
-* Provide a name (which includes your initials) description for the mean time between failure function
+* Provide a name {FirstInitial_First3LettersOfLastName}MTBF description for the mean time between failure function
 * Set the object to 'Asset'
 * The Data Source to 'Formula'
 * For the formula, we will use two different functions, one MTBF and the other DURATION. Find details of these formulas in the documentation. Populate the formula box with: `MTBF("CMWO",-1,DURATION(0,13,0,0,0,0),"reportdate","actfinish")/30`
@@ -225,9 +236,12 @@ Save and then return back to the *Create a contributor* Page
 ![Image](../images/image_91.png)
 ---
 
+### Create the rest of the contributors listed below
+
 ### Total Cost of a Corrective Maintenance:
 
-* Using the same relationship above, we can create a new contributor for total cost of maintenance. Provide a name and description
+* Using the same relationship above, we can create a new contributor for total cost of maintenance. Provide a name and description.
+   - Name = {FirstInitial_First3LettersOfLastName}TCCM
 * Set the Object to Asset
 * Set the Data Source to Formula
 * For the formula, we will use the `RELATIONSHIP$ATTRIBUTE` syntax: `(CMWO$ACTTOTALCOST)/REPLACECOST`
@@ -238,6 +252,7 @@ Save and then return back to the *Create a contributor* Page
 ### Est Cost of Replacement:
 
 * This example, we will be using asset attributes only. Provide a name and a description for the contributor
+   - Name = {FirstInitial_First3LettersOfLastName}ECR
 * Set the Object to Asset
 * Set the Data Source to Formula
 * Set the formula to: `REPLACECOST/BUDGETCOST`
@@ -246,6 +261,7 @@ Save and then return back to the *Create a contributor* Page
 ### Pressure Meter
 
 * This example, will use a simple Meter for Pressure. Pressure is a Guage meter. Provide a name and description for the contributor
+ -Name = {FirstInitial_First3LettersOfLastName}PRESSURE
 * Set the object to Asset
 * Set the Data Source to Meter
 * Select the 'PRESSURE' meter
@@ -256,6 +272,7 @@ Save and then return back to the *Create a contributor* Page
 
 ### Oil Meter
 * This example will use a Characteristic Meter for Oil Color. Provide a name and description for the contributor
+   - Name = {FirstInitial_First3LettersOfLastName}OIL
 * Set the object to Asset
 * Set the Data Source to Meter
 * Select the ‘OILCOLOR’ meter
@@ -266,6 +283,7 @@ Save and then return back to the *Create a contributor* Page
 
 ### Temperature
 * This is an example contributor for Motor Temperature
+   - Name = {FirstInitial_First3LettersOfLastName}TEMP
 * Set the object to Asset
 * Set the Data Source to Meter
 * Meter Type contributor
@@ -275,7 +293,7 @@ Save and then return back to the *Create a contributor* Page
 * Upper Limit: 200
 
 ### Health Contributor
-* Often, we find use cases to reference the result of another score within a score. Name this contributor ‘Health’ and provide a description
+* Often, we find use cases to reference the result of another score within a score. Name this contributor ‘ {FirstInitial_First3LettersOfLastName}Health’ and provide a description
 * Set the object to Asset
 * Set the Data source to Formula
 * Populate the formula with: `ASSETLOCSCORE("HEALTH")`
@@ -283,7 +301,7 @@ Save and then return back to the *Create a contributor* Page
 * Worst Value: 0
 
 ### Criticality Contributor
-* Name this contributor “Criticality" and provide a description
+* Name this contributor “{FirstInitial_First3LettersOfLastName}Criticality" and provide a description
 * Set the object to Asset
 * Set the Data source to Formula
 * Populate the formula with: `ASSETLOCSCORE("CRITICALITY")`

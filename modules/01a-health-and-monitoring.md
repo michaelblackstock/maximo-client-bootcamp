@@ -37,7 +37,7 @@ Click the links below to access each lab. These are located in the `labs` folder
 5. [Lab 05: Create Health views and mobile access](../labs/05_creating_health_views_and_mobile_access.md)  
    *Create a Health View in Maximo and prep mobile and PM work orders for demo execution.*  
 
-6. [Lab 06: More head Health views and mobile](../labs/06_more_health_views_and_mobile.md)  
+6. [Lab 06: More Health views and mobile](../labs/06_more_health_views_and_mobile.md)  
    *Set up Health View and prep Maximo Mobile with PM work orders.*
 
 7. [Lab 07: Customizing the technitions Maximo Mobile Application](../labs/maximo_mobile_spare_parts_toggle_lab.md)   
