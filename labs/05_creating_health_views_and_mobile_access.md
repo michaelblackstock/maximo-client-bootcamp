@@ -5,8 +5,6 @@
 
 ## **Prepare Mobile Device**
 
-Configure Self Signed Certificate: https://www.ibm.com/docs/en/masv-and-l/maximo-manage/8.3.0?topic=immamd-configuring-self-signed-certificates-maximo-application-suite-server-ios-devices
-
 
 ### **Step 1: Download Maximo Mobile**
 Install from the **App Store** or **Google Play**, accept all terms, and enable notifications.
