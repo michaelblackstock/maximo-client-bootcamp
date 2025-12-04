@@ -256,10 +256,10 @@ In some cases, you may need to create a new craft for the client use case (we us
 ~ In order to add a craft, press the + button
 
 ~ Press the ' > ' button to search/Go To Crafts for the craft
-
 Craft type "ARMCHAIR" for the first craft and "description ARM CHAIR REPAIR" then click Return with the Value.
 Craft type "SECTION" for the second craft and "description SECTION" then click Return with the Value.
 Craft type "MECH" for the third craft and "MECH" then click Return with the Value.
+
 ---
 
 ![Image](../images/image_63.png)
