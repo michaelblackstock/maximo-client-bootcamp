@@ -245,6 +245,7 @@ Save and then return back to the *Create a contributor* Page
 * Set the Object to Asset
 * Set the Data Source to Formula
 * For the formula, we will use the `RELATIONSHIP$ATTRIBUTE` syntax: `(CMWO$ACTTOTALCOST)/REPLACECOST`
+* For Unit of measure Enter this value `RELATIONSHIP$ATTRIBUT` and for the Formula enter this value `(CMWO$ACTTOTALCOST)/REPLACECOST`
 * ACTTOTALCOST is an attribute of work order, accessed through the CMWO relationship, and REPLACECOST is an attribute of the asset. It is a best practice to keep contributors as a ratio, as maintenance for a pump will be much more expensive than maintenance of a conveyor. Keeping this as a ratio allows for one contributor, with a best/worst value to be used across many asset classes
 * Provide a Unit of Measure of %
 * Provide a Best value of 25 and a worst value of 100
