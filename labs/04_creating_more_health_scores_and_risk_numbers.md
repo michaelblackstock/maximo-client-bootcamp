@@ -202,12 +202,7 @@ Select Contributors / Set Weights
 - {FirstInitial_First3LettersOfLastName}Health – 70%
 - {FirstInitial_First3LettersOfLastName}Criticality – 30%
 
-Click the Active button in the top right to enable the Criticality score.
-
-
-
-![Image](../images/image_175.png)
-
+Click the Active button in the top right to enable the Risk score.
 
 ---
 

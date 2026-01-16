@@ -157,7 +157,7 @@ Example meters:
 
 Use the plus button, then **Select Value**.
 ![Image](../images/image_55.png)
-
+ 
 ---
 
 ## **Step 16. Filter the list by the desired value**  
@@ -227,7 +227,7 @@ Use your assigned username
 
 ![Image](../images/image_61.png)
 
-If your "Person" does not exist, Follow these steps to create a new person
+If your "Person" does not exist, Follow these steps to create a new person or else Save the Labor record.
 
 ![Image](../images/image_61b.png)
 
@@ -320,6 +320,8 @@ Often paired with Preventive Maintenance to generate Work Orders.
 ### **Step 3. Provide a unique Job Plan number, description, and Duration**
 Use JPPUMP{FirstInitial_First3LettersOfLastName} as Job Plan name (ex. JPPUMPSKWA)
 
+ Discription: 6 months Maintenance for Low Flow Centrifugal Pumps.
+
 ---
 
 ![Image](../images/image_67.png)
@@ -327,11 +329,21 @@ Use JPPUMP{FirstInitial_First3LettersOfLastName} as Job Plan name (ex. JPPUMPSKW
 ---
 
 ### **Step 4. Add Job Plan tasks**  
-Scroll down to Job Plans Tasks to add tasks. Press the + button to add a new task
+Scroll down to Job Plans Tasks to add tasks and duration. Press the + button to add a new task
 
 *Tip: Task Numbers increment by 10 for flexibility.*
 
-![Image](../images/image_67b.png)
+| Task Discription  | Duration |
+| ------------- | ------------- |
+| Check pump operation. | 0:20  |
+| Check pump float switch.  | 0:30  |
+| Check housing for leaks. | 0:10  |
+| Replace Mechanical seal.  | 1:00  |
+| Replace contractor and clean contractor compartment.  | 1:00  |
+| Inspect impeller for wear.  | 0:10  |
+| Record Meter Readings for Temperature, Pressure and Oil color. | 0:15  |
+| Record any issues found, create follow up work.  | 0:15  |
+
 ![Image](../images/image_67c.png)
 
 ---

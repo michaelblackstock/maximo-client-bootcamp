@@ -162,9 +162,9 @@ Click **Create Threshold**.
 
 ---
 
-Step 4. **Provide the following details:**
-   - **Name**  "{FirstInitial_First3LettersOfLastName}-MTBF"
-   - **Description**
+**Step 4. Provide the following details:**
+   - **Name:**  "{FirstInitial_First3LettersOfLastName}-MTBF"
+   - **Description:** Default mean time between failure threshold
    - **Threshold:** 14 days
 
 ![Image](../images/image_88.png)
@@ -226,7 +226,8 @@ Save and then return back to the *Create a contributor* Page
 
 ### MTBF for Corrective Maintenance:
 
-* Provide a name {FirstInitial_First3LettersOfLastName}MTBF description for the mean time between failure function
+* Provide a name {FirstInitial_First3LettersOfLastName}MTBF . Description: Mean time between failure of all Corrective Maintenance in Days
+
 * Set the object to 'Asset'
 * The Data Source to 'Formula'
 * For the formula, we will use two different functions, one MTBF and the other DURATION. Find details of these formulas in the documentation. Populate the formula box with: `MTBF("CMWO",-1,DURATION(0,13,0,0,0,0),"reportdate","actfinish")/30`
@@ -244,8 +245,10 @@ Save and then return back to the *Create a contributor* Page
    - Name = {FirstInitial_First3LettersOfLastName}TCCM
 * Set the Object to Asset
 * Set the Data Source to Formula
-* For the formula, we will use the `RELATIONSHIP$ATTRIBUTE` syntax: `(CMWO$ACTTOTALCOST)/REPLACECOST`
-* For Unit of measure Enter this value `RELATIONSHIP$ATTRIBUT` and for the Formula enter this value `(CMWO$ACTTOTALCOST)/REPLACECOST`
+* For the formula :`(CMWO$ACTTOTALCOST)/REPLACECOST`
+
+  Note: syntax-  `RELATIONSHIP$ATTRIBUTE` 
+
 * ACTTOTALCOST is an attribute of work order, accessed through the CMWO relationship, and REPLACECOST is an attribute of the asset. It is a best practice to keep contributors as a ratio, as maintenance for a pump will be much more expensive than maintenance of a conveyor. Keeping this as a ratio allows for one contributor, with a best/worst value to be used across many asset classes
 * Provide a Unit of Measure of %
 * Provide a Best value of 25 and a worst value of 100
